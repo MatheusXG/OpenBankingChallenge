@@ -25,9 +25,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-import { calcBoxDelta } from 'framer-motion/types/projection/geometry/delta-calc';
-
-export default function WithSubnavigation() {
+export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -60,7 +58,7 @@ export default function WithSubnavigation() {
             boxSize='40px'
             src={
               'src/assets/logo.png'
-            }/>
+          }/>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
