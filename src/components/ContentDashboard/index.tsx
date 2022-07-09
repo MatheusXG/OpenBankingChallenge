@@ -34,7 +34,7 @@ function StatsCard(props: StatsCardProps) {
       px={{ base: 2, md: 4 }}
       py={'5'}
       shadow={'xl'}
-      border={'1px solid'}
+      border={'1px solid'}      
       bg={bg}
       borderColor={useColorModeValue('gray.800', 'gray.500')}
       rounded={'lg'}>
@@ -62,7 +62,6 @@ export default function Content() {
   
     return (
     <>
-
       <Box maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
         <chakra.h1
           textAlign={'center'}

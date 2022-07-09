@@ -3,23 +3,38 @@ import {
   Flex,
   Heading,
   Image,
+  Spinner,
   Stack,
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import Header from '../../components/Header';
 
+import { useAuth0 } from '@auth0/auth0-react';
+
+
 export default function Home() {
+
   const isWide = useBreakpointValue({
     base: false,
     lg: true, 
   })
 
+  const {
+    isLoading,
+    isAuthenticated,
+    error,
+    user,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
+
+
   return (
     <>
       <Header />
 
-      <Stack minH={'94.1vh'} direction={{ base: 'column', md: 'row' }}>
+      <Stack minH={'94vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -53,7 +68,8 @@ export default function Home() {
                 color={'white'}
                 _hover={{
                   bg: '#795548',
-                }}>
+                }}
+              >
                 Entrar
               </Button>
               <Button rounded={'full'}>Cadastrar-se</Button>

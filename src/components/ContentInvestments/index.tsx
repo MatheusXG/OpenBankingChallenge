@@ -34,7 +34,7 @@ interface Data {
   };
 }
 
-export default function ContentInvestiments() {
+export default function ContentInvestments() {
   // const data = [
   //   { name: "Daggy", created: "7 days ago" },
   //   { name: "Anubra", created: "23 hours ago" },
